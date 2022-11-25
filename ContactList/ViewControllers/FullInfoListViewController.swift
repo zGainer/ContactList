@@ -9,7 +9,7 @@ import UIKit
 
 class FullInfoListViewController: UITableViewController {
 
-    var persons: [person]!
+    var persons: [Person]!
 
     // MARK: - Table view data source
 
@@ -43,5 +43,9 @@ class FullInfoListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         persons[section].fullName
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

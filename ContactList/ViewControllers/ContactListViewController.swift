@@ -9,19 +9,7 @@ import UIKit
 
 class ContactListViewController: UITableViewController {
 
-    let persons = person.getPersons()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        guard let tabBarVC = tabBarController else { return }
-        
-        for viewController in tabBarVC.viewControllers! {
-            if let fullInfoVC = viewController as? FullInfoListViewController {
-                fullInfoVC.persons = persons
-            }
-        }
-    }
+    var persons: [Person]!
 
     // MARK: - Table view data source
 

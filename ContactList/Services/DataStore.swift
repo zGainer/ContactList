@@ -44,7 +44,7 @@ class DataStore {
     
     let emails: [String]
     
-    init() {
+    private init() {
         phoneNumbers = getPhoneNumbers(maxCount: names.count)
         emails = getEmails(maxCount: names.count)
     }
